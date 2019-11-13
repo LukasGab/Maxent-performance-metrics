@@ -1,8 +1,11 @@
 ---
-title: "Introduction"
-author: "Dan Warren"
-date: "6/29/2019"
-output: html_document
+title: "R function computing SDMs performance metrics (including new metrics suggested by Leroy et al. 2018)"
+paper from Leroy et al.: https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.13402
+author: "Lukas Gabor"
+date: "13/111/2019"
+metrics: AUC, TSS, Sensitivity, Specificity, Jaccard's similarity index, Sørensen's similarity index, 
+         F‐measure, Overprediction rate, Underprediction rate
+input (model.evaluation) = output of evaluate function (dismo package)
 ---
 
 performance.metrics <- function (model.evaluation) {
