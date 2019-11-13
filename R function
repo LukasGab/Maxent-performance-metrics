@@ -1,0 +1,20 @@
+---
+title: "Introduction"
+author: "Dan Warren"
+date: "6/29/2019"
+output: html_document
+---
+
+performance.metrics <- function (model.evaluation) {
+  AUC <- model.evaluation@auc
+  TSS <- mean(model.evaluation@TPR) + mean(model.evaluation@TNR) - 1
+  Sensitivity <- mean(model.evaluation@TPR)
+  Specificity <- mean(model.evaluation@TNR)
+  Sorensen <- 2*mean(model.evaluation@TPR)/((mean(model.evaluation@FNR) + 2*mean(model.evaluation@TPR) + mean(model.evaluation@FPR)))
+  Jaccard <- mean(model.evaluation@TPR)/((mean(model.evaluation@FNR) + mean(model.evaluation@TPR) + mean(model.evaluation@FPR)))
+  F.measure <- 2 * Jaccard
+  Over.pred <- mean(model.evaluation@FPR)/((mean(model.evaluation@TPR)+mean(model.evaluation@FPR)))
+  Under.pred <- mean(model.evaluation@FNR)/((mean(model.evaluation@TPR)+mean(model.evaluation@FNR)))
+  data.frame(AUC = AUC, TSS = TSS, Sensitivity = Sensitivity, Specificity = Specificity, Sorensen = Sorensen,
+       Jaccard = Jaccard, F.measure = F.measure, Over.pred = Over.pred, Under.pred = Under.pred)
+}
