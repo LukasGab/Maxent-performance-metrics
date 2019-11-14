@@ -1,6 +1,6 @@
 ---
 # title: "R function computing SDMs performance metrics (including new metrics suggested by Leroy et al. 2018)"
-# paper from Leroy et al. 2018: https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.13402
+# Paper title from Leroy et al.: Without quality presence–absence data, discrimination metrics such as TSS can be misleading measures of model performance
 # author: "Lukas Gabor"
 # date: "13/111/2019"
 # metrics: AUC, TSS, Sensitivity, Specificity, Jaccard's similarity index, Sørensen's similarity index, 
