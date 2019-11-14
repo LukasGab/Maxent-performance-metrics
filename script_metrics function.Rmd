@@ -6,6 +6,7 @@ date: "13/111/2019"
 metrics: AUC, TSS, Sensitivity, Specificity, Jaccard's similarity index, Sørensen's similarity index, 
          F‐measure, Overprediction rate, Underprediction rate
 input (model.evaluation): output of evaluate function (dismo package)
+output: dataframe
 ---
 
 
