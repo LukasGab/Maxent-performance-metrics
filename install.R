@@ -1,4 +1,4 @@
 install.packages("raster")
 install.packages("dismo")
-install.packages("rgdal")
+install.packages("gdal")
 install.packages("sp")
