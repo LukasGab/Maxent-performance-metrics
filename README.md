@@ -1,4 +1,2 @@
-# Trivial example for Binder
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LukasGab/Maxent-performance-metrics/master)
-
-Trivial example showing usage of Binder 
+# sim-code-Warren-et-al-2019
+Simulation code to accompany Warren et al. 2019, examining the relationship between discrimination accuracy and functional accuracy for ENM/SDM studies. See introduction file for details.
