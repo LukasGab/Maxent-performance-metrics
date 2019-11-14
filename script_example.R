@@ -1,3 +1,5 @@
+# Author: Lukas Gabor, 2019
+
 # Library packages
 library (raster)
 library(dismo)
