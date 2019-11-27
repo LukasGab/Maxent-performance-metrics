@@ -23,11 +23,11 @@ fold <- kfold(sp, k=5) # divide species occurrences to 5 folds (20 % for testing
 test <- sp[fold == 1, ]
 train <- sp[fold != 1, ]
 
-maxent.model <- maxent (preds, train, quadratic=T, hinge = T, linear = F, product = F, threshold = F,
-                          args=c("maximumbackground=10000", "betamultiplier=10", "defaultprevalence=0.5"))
+# Fit the model
+bioclim.model <- bioclim(preds, train)
   
 # Model Evaluation
-model.evaluation <- evaluate(maxent.model, p=test, a=bg, preds)
+model.evaluation <- evaluate(bioclim.model, p=test, a=bg, preds)
 
 # Load metrics function
 performance.metrics <- function (model.evaluation) {
